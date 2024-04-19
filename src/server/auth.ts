@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
             console.log("---------------jwt-----------------")
             console.log({token}, {account}, {profile})
             if (account && account.type === 'credentials') {
-                token.userID = account.providerAccountId;
+                token.userId = account.providerAccountId;
                 // this id that is coming from authorize() callback
             }
             return token
