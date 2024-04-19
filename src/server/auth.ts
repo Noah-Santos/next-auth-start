@@ -23,8 +23,8 @@ export const authOptions: NextAuthOptions = {
             // after the token is created in JWT callback, we need to pass the userID to the user.id so it will be available to the UI
             // because the User type only consists of name, email ..etc, we will create a type definition to add id in the User object later
             console.log("---------------session-----------------")
-            console.log({ session }, { token }, { user })
             session.user.id = token.userId
+            console.log({ session }, { token }, { user })
             return session
         },
     },
